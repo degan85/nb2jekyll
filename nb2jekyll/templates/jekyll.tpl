@@ -21,6 +21,15 @@ layout: notebook
 {% endblock in_prompt %}
 
 {% block input %}
+{{ 'In[' }}
+{{ cell.execution_count }}
+{{ ']' }}
+{{ '```python' }}
+{{ cell.source }}
+{{ '```' }}
+{% endblock input %}
+
+{% block input %}
 {{ '{% highlight python %}' }}
 {{ cell.source }}
 {{ '{% endhighlight %}' }}
